@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test --headed"
+    "test": "playwright test --headed",
+    "test:ci": "playwright test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.40.1"
+    "@playwright/test": "^1.29.1"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
