@@ -12,6 +12,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      - name: Run tests
         run: |
           echo "Start the shopping store application"
           ./shopping-store-linux-amd64 &
