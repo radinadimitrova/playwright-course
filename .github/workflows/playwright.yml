@@ -14,8 +14,9 @@ jobs:
         uses: actions/checkout@v2
       - name: Run tests
         run: |
+          set -e 
           echo "Start the shopping store application"
-          ./shopping-store-linux-amd64 &
+          chmod +x ./shopping-store-linux-amd64 && ./shopping-store-linux-amd64 &
           echo "Install dependencies from lockfile"
           npm ci
           echo "Run playwright tests"
