@@ -5,7 +5,7 @@ import { adminDetails } from "../data/userDetails.js";
 
 
 test("My account using cookie injection and mocking network request", async ({ page }) => {
-    const loginToken = await getLoginToken (adminDetails.username, adminDetails.password)
+    const loginToken = await getLoginToken(adminDetails.username, adminDetails.password)
     await page.route("**/api/user**", async (route, request) => {
         await route.fulfill({
             status: 500,
